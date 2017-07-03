@@ -159,5 +159,13 @@ namespace RemoteView
             SendInput(1, ref mouseInput, Marshal.SizeOf(new INPUT()));
 
         }
+        public static void KeyDown(string keys)
+        {
+            if(keys== "{SPACE}")
+            {
+                keys = " ";
+            }
+            System.Windows.Forms.SendKeys.SendWait(keys);
+        }
     }
 }

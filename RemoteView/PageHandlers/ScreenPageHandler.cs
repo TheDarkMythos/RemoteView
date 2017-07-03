@@ -75,7 +75,9 @@ namespace RemoteView.PageHandlers
             {
                 Bitmap bmp = new Bitmap(screen.Bounds.Width, screen.Bounds.Height);
                 Graphics.FromImage(bmp).CopyFromScreen(screen.Bounds.X, screen.Bounds.Y, 0, 0, screen.Bounds.Size);
+                //Bitmap bmp = CaptureScreen.CaptureDesktopWithCursor();
                 bmp.Save(ms, ImageFormat.Png);
+               
                 return ms.GetBuffer();
             }
         }

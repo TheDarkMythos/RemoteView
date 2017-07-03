@@ -39,6 +39,7 @@ namespace RemoteView
             decoder.Add("rightclick", new RightClickPageHandler());
             decoder.Add("mousemove", new MouseMovePageHandler());
 
+            decoder.Add("keydown", new KeyDownPageHandler());
             // image of choosen device as a png
             decoder.Add("screen", new ScreenPageHandler());
 
